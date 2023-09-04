@@ -9,5 +9,7 @@ Challenges include:
 - GIT repo creation
 - Bonus: Taking in multiple links and displaying them.
 
-The project had to be run through a server to allow all the iframes to display the youtube link correctly
+The project had to be run through a server to allow all the iframes to display the youtube link correctly.
+
+Completed challenges = All 
 
