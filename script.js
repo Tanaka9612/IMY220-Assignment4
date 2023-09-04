@@ -25,8 +25,9 @@ function getIDs(a){
 // check if the document is ready before DOM manipulations
 $(document).ready(function(){
     $('#left, #right').on('click', function(){
+
         let m = document.getElementById("message").value;
-        console.log("m = "+m);
+
         let urls = checkIfUrl(m);
         // operations
         if(urls==null && m !=="")
@@ -42,12 +43,13 @@ $(document).ready(function(){
                 IDs[d] = getIDs(urls[d]);
             }
             for(let i = 0 ; i < urls.length ; i++){
-                let html = '<div class="col-4 offset-4 mb-2 rounded">'+m+'<iframe width="100%" height="315px" src="//www.youtube.com/embed/'+IDs[i]+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
+                let html = '<div class="col-4 offset-4 mb-2 w-75 rounded">'+m+'<iframe width="100%" height="315px" src="//www.youtube.com/embed/'+IDs[i]+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
                 $('.messages').append(html);
                 var random = colors[Math.floor(Math.random() * colors.length)];
                 $('div.col-4:last-child').css('background-color', random);
             }
         }
-        else{}
+        else{//maybe its not needed
+        }
     });
 });
